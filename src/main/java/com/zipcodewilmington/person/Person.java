@@ -6,12 +6,10 @@ package com.zipcodewilmington.person;
 public class Person {
     private String name ="";
     private int age=Integer.MAX_VALUE;
-    private String gender ="";
-    private int weight=Integer.MAX_VALUE;
-    public Person(String name, int age, String gender, int weight) {
+    private float weight=Float.MAX_VALUE;
+    public Person(String name, int age,  float weight) {
         this.name = name;
         this.age = age;
-        this.gender = gender;
         this.weight = weight;
     }
     public Person(){
@@ -20,9 +18,15 @@ public class Person {
     public Person(int age) {
         this.age = age;
     }
-    public Person(String name) {
-         this.name = name;
+    public Person(float weight) {
+        this.weight = weight;
     }
+  public Person(String name) {
+        this.name = name;
+    }
+
+
+
 
     public Person(int age, String name) {
         this.name = name;
@@ -35,23 +39,19 @@ public class Person {
     public void setAge(int age) {
         this.age = age;
     }
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-    public void setWeight(int weight) {
+
+    public void setWeight(float weight) {
         this.weight = weight;
     }
     public String getName() {
-        return this.name;
+        return name;
     }
     public Integer getAge() {
-        return this.age;
+        return age;
     }
-    public String getGender() {
-        return this.gender;
-    }
-    public Integer getWeight() {
-        return this.weight;
+
+    public Float getWeight() {
+        return weight;
     }
 }
 

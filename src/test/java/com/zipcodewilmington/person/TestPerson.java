@@ -12,18 +12,15 @@ public class TestPerson {
         // Given
         String expectedName = "";
         Integer expectedAge = Integer.MAX_VALUE;
-        String expectedGender = "";
-        Integer expectedWeight = Integer.MAX_VALUE;
+        Float expectedWeight = Float.MAX_VALUE;
         // When
         Person person = new Person();
         // Then
         String actualName = person.getName();
         Integer actualAge = person.getAge();
-        String actualGender = person.getGender();
-        Integer actualWeight = person.getWeight();
+        Float actualWeight = person.getWeight();
         Assert.assertEquals(expectedName, actualName);
         Assert.assertEquals(expectedAge, actualAge);
-        Assert.assertEquals(expectedGender, actualGender);
         Assert.assertEquals(expectedWeight, actualWeight);
     }
     @Test
@@ -46,24 +43,16 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
-    @Test
-    public void testConstructorWithGender() {
-        // Given
-        String expected = "Female";
-        // When
-        Person person = new Person(expected);
-        // Then
-        String actual = person.getGender();
-        Assert.assertEquals(expected, actual);
-    }
+
+
     @Test
     public void testConstructorWithWeight() {
         // Given
-        Integer expected = 100;
+        Float expected = 20.0f;
         // When
         Person person = new Person(expected);
         // Then
-        Integer actual = person.getWeight();
+        Float actual = person.getWeight();
         Assert.assertEquals(expected, actual);
     }
     @Test
@@ -102,26 +91,16 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
-    @Test
-    public void testSetGender() {
-        // Given
-        Person person = new Person();
-        String expected = "Female";
-        // When
-        person.setGender(expected);
-        // Then
-        String actual = person.getGender();
-        Assert.assertEquals(expected, actual);
-    }
+
     @Test
     public void testSetWeight() {
         // Given
         Person person = new Person();
-        Integer expected = 160;
+        Float expected = 160f;
         // When
         person.setWeight(expected);
         // Then
-        Integer actual = person.getWeight();
+        Float actual = person.getWeight();
         Assert.assertEquals(expected, actual);
     }
 }
